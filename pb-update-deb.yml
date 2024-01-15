@@ -1,0 +1,10 @@
+---
+- name: Update systems
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install updates for Ubuntu systems
+      apt:
+        update_cache: yes
+        upgrade: dist
+      when: ansible_facts['os_family'] == "Debian"
