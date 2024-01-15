@@ -1,6 +1,6 @@
 ---
 - name: Update systems
-  hosts: "{{ hosts }}"
+  hosts: all
   become: yes
   tasks:
     - name: Install updates for RedHat/CentOS systems
