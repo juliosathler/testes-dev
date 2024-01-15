@@ -1,10 +1,10 @@
 ---
-- name: Update systems
-  hosts: all
-  become: yes
+- hosts: all
+
+  become: true
   tasks:
      - name: Install updates for RedHat/CentOS systems
-      yum:
+       yum:
         name: '*'
         state: latest
-      when: ansible_facts['os_family'] == "RedHat"
+       when: ansible_facts['os_family'] == "RedHat"
