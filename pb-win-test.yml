@@ -5,4 +5,3 @@
     - name: Remote Execute the mqsc files
       win_shell: |
         hostname
-        Get-Date
