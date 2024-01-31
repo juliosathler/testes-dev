@@ -1,6 +1,6 @@
 ---
 - name: Windows Test Playbook
-  hosts: win
+  hosts: all
   tasks:
     - name: Remote Execute the mqsc files
       win_shell: |
