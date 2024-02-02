@@ -1,0 +1,14 @@
+---
+- name: Install default apps 
+  hosts: all 
+  gather_facts: false
+  tasks: 
+  - name: Upgrade installed packages
+    win_chocolatey:
+      name: all
+      state: latest
+  
+  - name: install GoogleChrome
+    win_chocolatey:
+      name: googlechrome
+      state: present
