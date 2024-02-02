@@ -1,11 +1,12 @@
 ---
 - name: Install 7-zip
   hosts: all
+  gather_facts: false
   tasks:
   - name: Create C:\temp
-      win_file:
-        path: C:\temp
-        state: directory 
+    win_file:
+      path: C:\temp
+      state: directory 
   
   - name: Download the 7-Zip package
     win_get_url:
